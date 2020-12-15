@@ -1,0 +1,51 @@
+
+Zoho Corporation - Programming Test
+
+
+1. Write a program to print the below pattern.
+
+Input: 5
+
+           0
+            1 0 1        
+         2 1 0 1 2      
+      3 2 1 0 1 2 3    
+   4 3 2 1 0 1 2 3 4  
+5 4 3 2 1 0 1 2 3 4 5
+
+Input: 3
+
+
+           0
+            1 0 1        
+         2 1 0 1 2      
+      3 2 1 0 1 2 3    
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void print(int n)
+{
+  int a = 1,b = 1;
+  for(int i = 0;i<n;i++)
+  {
+    for(int j = n-1;j>i;j--)
+    { 
+      cout<<" ";
+    }
+    for(int k = 1;k<=a;k++)
+    {
+     cout<<abs(k-b);
+    }
+    a+=2;
+    b++;
+    cout<<"\n";
+  }
+}
+int main()
+{
+ int n;
+ cin>>n;
+ print(n+1);
+ return 0;
+}
